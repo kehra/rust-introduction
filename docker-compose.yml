@@ -1,0 +1,10 @@
+version: '3'
+services:
+  rust:
+    image: rust:slim-stretch
+    volumes:
+      - .:/opt/rustapp
+    environment:
+      - USER=`${USER}`
+    working_dir: /opt/rustapp
+    stdin_open: true
